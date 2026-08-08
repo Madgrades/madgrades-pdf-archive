@@ -1,35 +1,54 @@
-# madgrades-data
+# uw-madison-pdf-archive
 
-Source data for [Madgrades](https://madgrades.com).
+An archive of publicly available UW–Madison academic PDF reports used by Madgrades and related data-processing projects.
 
-## On the usage of this repository's data
+This repository stores source documents only. Extraction, transformation, and validation logic belong in separate repositories such as [`uw-madison-pdf-extractor`](https://github.com/Madgrades/uw-madison-pdf-extractor).
 
-We acknowledge that the data in this repository is primarily used by individuals and services like Madgrades.com to help students make informed course selections. However, keep in the mind the possibility of inaccuracies in this information due to data misinterpretation (as mentioned below), and that grade distributions are just one factor to consider. For a well-rounded view, explore consulting other sources such as students, instructors, and university-sponsored resources, and consider your own interests and academic goals.
+## Using this data
 
-We hope that this repository and Madgrades serves as a valuable resource for students and researchers, promoting transparency.
+The reports in this repository are commonly used by projects such as [Madgrades](https://madgrades.com) to help students explore historical course and grade information.
 
-## On the usage of Departmental Instructional Report (DIR) Data
+These reports should be interpreted with care. They were not necessarily designed for the purposes of external analysis, and errors can be introduced through extraction, interpretation, or differences in university terminology and reporting practices.
 
-The University of Wisconsin-Madison has stated that they do not endorse the republication of DIR data on external websites. Although the files are publicly available, they intend for the data in the DIR files to be used internally by administrators. It uses language and structure aligned with their academic structure and student information system needs. These internal terminologies, structures, and business processes would need to be fully understood to not draw false conclusions from the data.
+Grade distributions are also only one source of information when evaluating a course. Students may want to consider other sources, including instructors, other students, university resources, course descriptions, and their own academic interests and goals.
 
-Madgrades acknowledges the university's position. However, we believe that public access to this information serves an important function, so we are making this data available on this site for informational and research purposes while also strongly encouraging responsible use:
+The goal of this archive is to preserve access to useful public records for informational and research purposes while encouraging responsible interpretation.
 
-* Understand the context: Be aware that this data has a specific intended purpose for internal university use that may not be aligned with your needs.
-* Interpret with caution: Understand that any external interpretation made using this data could have inaccuracies, so conclusions cannot necessarily be drawn.
-* Use ethically: Do not use this information for malicious purposes such as targeting individuals.
+## Departmental Instructional Report (DIR) data
+
+The University of Wisconsin–Madison has stated that it does not endorse republication of Departmental Instructional Report (DIR) data on external websites.
+
+Although DIR reports are publicly available, they are primarily intended for internal administrative use. Their terminology, structure, and organization reflect university academic systems and business processes, and those details may need to be understood before drawing conclusions from the data.
+
+Madgrades acknowledges this position while also recognizing the value of public access to these records for informational and research purposes.
+
+When using DIR data:
+
+* **Understand the context.** These reports were created for internal university purposes and may not map directly to external interpretations or use cases.
+* **Interpret cautiously.** Apparent patterns in the data may depend on university-specific terminology, reporting rules, or extraction assumptions.
+* **Use responsibly.** Do not use the data to harass, target, or otherwise cause harm to individuals.
+
+## Repository contents
+
+One PDF from each available fall and spring semester should be stored in the appropriate directory:
+
+* `grades` contains published tabular [course grade-distribution reports](https://registrar.wisc.edu/grade-reports/) under **Course grade-distribution reports**.
+
+  * Pre-2014 grade-distribution reports are also available [here](https://uwmadison.app.box.com/s/40rmvbsws0yzbcmb7gj2yc8ufpqvotds).
+* `dir` contains published tabular [final Departmental Instructional Reports (DIR)](https://registrar.wisc.edu/curricular-build/#dir).
+
+This repository is intended to preserve the original source PDFs rather than transformed or normalized datasets.
 
 ## Contributing
 
-Changes to this repository, such as new PDF reports, will automatically trigger:
+Contributions are welcome, particularly for:
 
-1. Conversion of PDFs into a relational database.
-2. Deployment of new database to [Madgrades](https://madgrades.com).
+* adding newly published semester reports
+* filling gaps in the archive
+* correcting misplaced or incorrect source files
 
-If you would like to help out by adding the latest semester's data or making corrections, feel free to submit a pull request. One PDF from each fall/spring semester should be present in the following directories:
+Please submit changes through a pull request.
 
-* `grades` contains PDFs of the published tabular [grade distributions reports](https://registrar.wisc.edu/grade-reports/) (under "Course grade-distribution reports")
-    * Note: Pre-2014 grade distributions reports available [here](https://uwmadison.app.box.com/s/40rmvbsws0yzbcmb7gj2yc8ufpqvotds)
-* `dir` contains PDFs of the published tabular [final department instructional reports (DIR)](https://registrar.wisc.edu/curricular-build/#dir).
+Changes to this repository may trigger downstream processing used by Madgrades, including extraction of the source PDFs and deployment of updated data to [Madgrades](https://madgrades.com).
 
-After the pull request is created an administrator will review, approve, and merge the change into the main branch.
-
+An administrator will review and approve pull requests before they are merged.
