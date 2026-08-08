@@ -29,5 +29,5 @@ jobs:
         with:
           context: ./
           tags: |
-            ghcr.io/madgrades/madgrades-data:latest
+            ghcr.io/madgrades/uw-madison-pdf-archive:latest
           push: ${{ github.ref == 'refs/heads/main' }}
