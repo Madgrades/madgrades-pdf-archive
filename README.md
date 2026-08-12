@@ -1,8 +1,6 @@
-# uw-madison-pdf-archive
+# madgrades-pdf-archive
 
 An archive of publicly available UW–Madison academic PDF reports used by Madgrades and related data-processing projects.
-
-This repository stores source documents only. Extraction, transformation, and validation logic belong in separate repositories such as [`uw-madison-pdf-extractor`](https://github.com/Madgrades/uw-madison-pdf-extractor).
 
 ## Using this data
 
